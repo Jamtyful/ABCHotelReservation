@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.ncat.aggies.abchotelreservation.ReservationController">
+
+    <HBox alignment="CENTER">
+        <Label text="Name" GridPane.columnIndex="0" GridPane.RowIndex="0"/>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="customerField"/>
+    </HBox>
+
+    <ComboBox promptText="Room Type" fx:id="roomTypeComboBox" onAction="#onRoomTypeChanged"/>
+
+    <DatePicker  promptText="Start Date" fx:id="startDatePicker" onAction="#onStartDatePicked"/>
+
+    <DatePicker promptText="End Date" fx:id="endDatePicker" onAction="#onEndDatePicked"/>
+
+    <Label fx:id="totalCost"/>
+
+    <Button text="Reserve" onAction="#makeReservation"/>
+
+</VBox>
